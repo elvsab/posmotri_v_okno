@@ -16,6 +16,10 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -35,4 +39,248 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0, 30px, 0, 30px;
+}
+
+.result {
+  padding-right: 30px;
+  align-self: self-end;
+}
+
+.result__video-container {
+  width: 711px;
+  position: relative;
+}
+
+.result__video {
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.content__list {
+  position: relative;
+  height: 298px;
+}
+
+.content__details {
+  max-height: 534px;
+  width: 399px;
+  overflow-x: scroll;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+  overflow-x: hidden;
+  width: 194px;
+  height: 103px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.content__video-card-description {
+  height: 65px;
+  font-family: 'Fira Sans Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+}
+
+.title {
+  padding-bottom: 26px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 70.5px;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  opacity: 30%;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  padding-top: 16px;
+}
+
+.search-form:last-child {
+  align-items: end;
+}
+
+.search-form__textfield {
+  color: rgba(255, 255, 255, 0.7);
+  appearance: none;
+  width: 100%;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  padding: 2.5px 0 2.5px 0px;
+  border: none;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__fieldset {
+  border: none;
+  width: 225px;
+  height: 54px;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  border: 1px solid white;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: white;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 1.5px;
+  width: 100%;
+}
+
+.search-form__label:has(:focus-within) {
+  outline: 1px solid white;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button {
+  height: 34px;
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 700;
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus-visible {
+  outline: 1px solid white;
+}
+
+.search-form__submit-button {
+  width: 194px;
+}
+
+.more-button {
+  width: 399px;
+}
+
+.content__list-item:hover {
+  text-decoration: underline;
+}
+
+.content__list-item:focus {
+  outline: none;
+}
+
+.content__list-item:focus-visible {
+  outline: 1px solid white;
+}
+
+.content__list-item:not(:last-child) {
+  padding-bottom: 30px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  margin: 2px 2px 2px 2px;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__video-card-title {
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
