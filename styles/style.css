@@ -42,7 +42,6 @@ ol {
 }
 
 .content {
-  position: absolute;
   display: flex;
   align-items: flex-end;
   width: 100%;
@@ -181,7 +180,6 @@ ol {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: '';
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -276,7 +274,6 @@ ol {
 }
 
 .visually-hidden {
-  position: absolute;
   inline-size: 1px;
   block-size: 1px;
   overflow: hidden;
