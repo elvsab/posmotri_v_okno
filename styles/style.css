@@ -69,11 +69,11 @@ ol {
 .content__list {
   position: relative;
   height: 298px;
+  overflow-x: scroll;
 }
 
 .content__details {
-  width: 399px;
-  overflow-x: scroll;
+  max-width: 100%;
 }
 
 .content__video-card {
@@ -100,13 +100,16 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .title {
   position: sticky;
   z-index: 2;
   top: -1px;
-  background-color: #1b1919;
   padding-bottom: 26px;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
@@ -181,6 +184,8 @@ ol {
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  display: block;
+  position: absolute;
   content: '';
   top: 50%;
   left: 50%;
@@ -188,6 +193,10 @@ ol {
   width: 14px;
   height: 14px;
   background-color: white;
+}
+
+.search-form__fieldset:nth-child(2) {
+  align-self: baseline;
 }
 
 .search-form__label {
@@ -204,6 +213,10 @@ ol {
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.search-form__label-text {
+  padding-left: 5px;
 }
 
 .button {
@@ -278,6 +291,11 @@ ol {
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .visually-hidden {
