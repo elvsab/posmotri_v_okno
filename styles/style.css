@@ -178,18 +178,16 @@ ol {
   width: 19px;
   height: 19px;
   border: 1px solid white;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   cursor: pointer;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   display: block;
-  position: absolute;
   content: '';
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 14px;
   height: 14px;
   background-color: white;
